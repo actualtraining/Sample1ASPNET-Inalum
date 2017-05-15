@@ -85,6 +85,7 @@
     <Content Include="SampleAutoPostBack.aspx" />
     <Content Include="SampleCheckBox.aspx" />
     <Content Include="SampleCheckboxList.aspx" />
+    <Content Include="SamplePanel.aspx" />
     <Content Include="SampleRadio.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -134,6 +135,13 @@
     </Compile>
     <Compile Include="SampleCheckboxList.aspx.designer.cs">
       <DependentUpon>SampleCheckboxList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePanel.aspx.cs">
+      <DependentUpon>SamplePanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamplePanel.aspx.designer.cs">
+      <DependentUpon>SamplePanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="SampleRadio.aspx.cs">
       <DependentUpon>SampleRadio.aspx</DependentUpon>
