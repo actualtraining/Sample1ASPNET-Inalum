@@ -65,7 +65,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContohImage.aspx" />
     <Content Include="ContohViewState.aspx" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -85,6 +89,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContohImage.aspx.cs">
+      <DependentUpon>ContohImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContohImage.aspx.designer.cs">
+      <DependentUpon>ContohImage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ContohViewState.aspx.cs">
       <DependentUpon>ContohViewState.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
