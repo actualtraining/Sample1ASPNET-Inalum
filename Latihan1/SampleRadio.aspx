@@ -10,9 +10,12 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label Text="Masukan bahasa permrograman favorite anda ?" runat="server" /><br />
-            <asp:RadioButton ID="rdCSharp" Text="C#" GroupName="Bahasa" runat="server" />
-            <asp:RadioButton ID="rdVB" Text="VB" GroupName="Bahasa" runat="server" />
-            <asp:RadioButton ID="rdJava" Text="Java" GroupName="Bahasa" runat="server" />
+            <asp:RadioButton ID="rdCSharp" Text="C#" GroupName="Bahasa" AutoPostBack="true" 
+                OnCheckedChanged="rdBahasa_CheckedChanged" runat="server" />
+            <asp:RadioButton ID="rdVB" Text="VB" GroupName="Bahasa" AutoPostBack="true" 
+                OnCheckedChanged="rdBahasa_CheckedChanged" runat="server" />
+            <asp:RadioButton ID="rdJava" Text="Java" GroupName="Bahasa" AutoPostBack="true" 
+                OnCheckedChanged="rdBahasa_CheckedChanged" runat="server" />
             <br /><br />
 
             <asp:Label Text="Masukan IDE favorite anda ?" runat="server" /><br />
@@ -20,7 +23,7 @@
             <asp:RadioButton ID="rdEclipse" Text="Eclipse" runat="server" GroupName="IDE" />
             <asp:RadioButton ID="rdSublime" Text="Sublime Text" runat="server" GroupName="IDE" /><br /><br />
 
-            <asp:Button Text="Submit" ID="btnSubmit" runat="server" /><br /><hr />
+            <br /><hr />
             <asp:Label ID="lblHasil" runat="server" />
         </div>
     </form>

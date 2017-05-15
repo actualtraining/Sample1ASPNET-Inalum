@@ -76,15 +76,6 @@ namespace Latihan1 {
         protected global::System.Web.UI.WebControls.RadioButton rdSublime;
         
         /// <summary>
-        /// btnSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
         /// lblHasil control.
         /// </summary>
         /// <remarks>

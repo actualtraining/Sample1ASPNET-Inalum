@@ -13,5 +13,29 @@ namespace Latihan1
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void rdBahasa_CheckedChanged(object sender, EventArgs e)
+        {
+            string hasil = "";
+            if (rdCSharp.Checked)
+            {
+                hasil = "Anda memilih bahasa C# ";
+            }
+            else if (rdVB.Checked)
+            {
+                hasil = "Anda memilih bahasa VB";
+            }
+            else
+            {
+                hasil = "Anda memilih java";
+            }
+
+            lblHasil.Text = hasil;
+        }
     }
 }
