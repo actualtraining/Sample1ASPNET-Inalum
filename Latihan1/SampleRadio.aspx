@@ -10,15 +10,18 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label Text="Masukan bahasa permrograman favorite anda ?" runat="server" /><br />
-            <asp:RadioButton Text="C#" GroupName="Bahasa" runat="server" />
-            <asp:RadioButton Text="VB" GroupName="Bahasa" runat="server" />
-            <asp:RadioButton Text="Java" GroupName="Bahasa" runat="server" />
+            <asp:RadioButton ID="rdCSharp" Text="C#" GroupName="Bahasa" runat="server" />
+            <asp:RadioButton ID="rdVB" Text="VB" GroupName="Bahasa" runat="server" />
+            <asp:RadioButton ID="rdJava" Text="Java" GroupName="Bahasa" runat="server" />
             <br /><br />
 
             <asp:Label Text="Masukan IDE favorite anda ?" runat="server" /><br />
-            <asp:RadioButton Text="Visual Studio 2015" GroupName="IDE" runat="server" />
-            <asp:RadioButton Text="Eclipse" runat="server" GroupName="IDE" />
-            <asp:RadioButton Text="Sublime Text" runat="server" GroupName="IDE" /><br />
+            <asp:RadioButton ID="rdVS" Text="Visual Studio 2015" GroupName="IDE" runat="server" />
+            <asp:RadioButton ID="rdEclipse" Text="Eclipse" runat="server" GroupName="IDE" />
+            <asp:RadioButton ID="rdSublime" Text="Sublime Text" runat="server" GroupName="IDE" /><br /><br />
+
+            <asp:Button Text="Submit" ID="btnSubmit" runat="server" /><br /><hr />
+            <asp:Label ID="lblHasil" runat="server" />
         </div>
     </form>
 </body>
