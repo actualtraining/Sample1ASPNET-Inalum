@@ -19,9 +19,11 @@
             <br /><br />
 
             <asp:Label Text="Masukan IDE favorite anda ?" runat="server" /><br />
-            <asp:RadioButton ID="rdVS" Text="Visual Studio 2015" GroupName="IDE" runat="server" />
-            <asp:RadioButton ID="rdEclipse" Text="Eclipse" runat="server" GroupName="IDE" />
-            <asp:RadioButton ID="rdSublime" Text="Sublime Text" runat="server" GroupName="IDE" /><br /><br />
+            <asp:RadioButtonList ID="rdIDE" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rdIDE_SelectedIndexChanged">
+                <asp:ListItem Text="Visual Studio" Value="Visual Studio" />
+                <asp:ListItem Text="Eclipse" Value="Eclipse" />
+                <asp:ListItem Text="Sublime Text" Value="Sublime Text" />
+            </asp:RadioButtonList>
 
             <br /><hr />
             <asp:Label ID="lblHasil" runat="server" />

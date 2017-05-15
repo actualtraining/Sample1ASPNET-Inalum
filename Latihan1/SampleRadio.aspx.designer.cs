@@ -49,31 +49,13 @@ namespace Latihan1 {
         protected global::System.Web.UI.WebControls.RadioButton rdJava;
         
         /// <summary>
-        /// rdVS control.
+        /// rdIDE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdVS;
-        
-        /// <summary>
-        /// rdEclipse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdEclipse;
-        
-        /// <summary>
-        /// rdSublime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdSublime;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdIDE;
         
         /// <summary>
         /// lblHasil control.

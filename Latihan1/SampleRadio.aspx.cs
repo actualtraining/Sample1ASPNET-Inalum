@@ -14,11 +14,6 @@ namespace Latihan1
 
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         protected void rdBahasa_CheckedChanged(object sender, EventArgs e)
         {
             string hasil = "";
@@ -36,6 +31,11 @@ namespace Latihan1
             }
 
             lblHasil.Text = hasil;
+        }
+
+        protected void rdIDE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblHasil.Text = "Anda memilih :" + rdIDE.SelectedValue;
         }
     }
 }
