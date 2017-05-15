@@ -10,7 +10,8 @@
     <form id="form1" runat="server">
         <div>
             <asp:Image ID="imgPegawai" Width="150" runat="server" /><br /><br />
-            <asp:Button Text="Show Random Images" ID="btnRandom" runat="server" OnClick="btnRandom_Click" /><br />
+            <asp:Button Text="Show Random Images" ID="btnRandom" runat="server"
+                OnClick="btnRandom_Click" /><br />
         </div>
     </form>
 </body>
