@@ -13,5 +13,17 @@ namespace Latihan1
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (chkSetuju.Checked)
+            {
+                lblHasil.Text = "Anda setuju !";
+            }
+            else
+            {
+                lblHasil.Text = "Anda tidak setuju !";
+            }
+        }
     }
 }

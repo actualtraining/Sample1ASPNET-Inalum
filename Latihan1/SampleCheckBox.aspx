@@ -12,7 +12,8 @@
             <asp:Label Text="Check untuk setuju dengan syarat dan ketentuan yang berlaku" runat="server" /><br />
             <asp:CheckBox Text="Saya setuju dengan syarat dan ketentuan" ID="chkSetuju" runat="server" />
             <br />
-            <asp:Button Text="Submit" ID="btnSubmit" runat="server" />
+            <asp:Button Text="Submit" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" /><br /><br />
+            <asp:Label ID="lblHasil" runat="server" />
         </div>
     </form>
 </body>
