@@ -35,6 +35,7 @@ namespace Latihan1
 
         protected void rdIDE_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //menggunakan listradio
             lblHasil.Text = "Anda memilih :" + rdIDE.SelectedValue;
         }
     }
