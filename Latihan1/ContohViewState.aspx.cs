@@ -7,16 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace Latihan1
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class ContohViewState : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnRegister_Click(object sender, EventArgs e)
+        protected void btnCount_Click(object sender, EventArgs e)
         {
-            lblHasil.Text = "Nama anda :" + txtFirstName.Text + " " + txtLastName.Text;
+            int nilai = Convert.ToInt32(lblNilai.Text);
+            nilai += 1;
+            lblNilai.Text = nilai.ToString();
         }
     }
 }
