@@ -18,7 +18,8 @@
                 <asp:ListItem Text="Volley" Value="Volley" />
             </asp:CheckBoxList>
             <br />
-            <asp:Button Text="Submit" ID="btnSubmit" runat="server" /><br /><hr />
+            <asp:Button Text="Submit" ID="btnSubmit" runat="server" 
+                OnClick="btnSubmit_Click" /><br /><hr />
             <asp:Label ID="lblHasil" runat="server" />
         </div>
     </form>

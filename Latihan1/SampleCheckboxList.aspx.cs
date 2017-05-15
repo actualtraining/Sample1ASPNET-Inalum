@@ -13,5 +13,18 @@ namespace Latihan1
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string hasil = "";
+            foreach (ListItem item in clHobby.Items)
+            {
+                if (item.Selected)
+                {
+                    hasil += item.Value + "<br/>";
+                }
+            }
+            lblHasil.Text = hasil;
+        }
     }
 }
