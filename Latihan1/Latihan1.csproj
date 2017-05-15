@@ -79,6 +79,7 @@
     <Content Include="Global.asax" />
     <Content Include="MyStyleSheet.css" />
     <Content Include="SampleAutoPostBack.aspx" />
+    <Content Include="SampleCheckBox.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="SampleAutoPostBack.aspx.designer.cs">
       <DependentUpon>SampleAutoPostBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleCheckBox.aspx.cs">
+      <DependentUpon>SampleCheckBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleCheckBox.aspx.designer.cs">
+      <DependentUpon>SampleCheckBox.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
