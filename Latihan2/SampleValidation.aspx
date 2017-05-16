@@ -36,6 +36,12 @@
                     ControlToValidate="txtRepassword" Operator="Equal"
                     ControlToCompare="txtPassword" runat="server" /><br /><br />
 
+                <asp:Label Text="Umur :" runat="server" /><br />
+                <asp:TextBox runat="server" ID="txtUmur" />
+                <asp:CompareValidator ErrorMessage="{Tipe data harus Currency}" 
+                    ControlToValidate="txtUmur" Operator="DataTypeCheck" 
+                    Type="Currency" runat="server" /><br /><br />
+
 
                 <asp:Button Text="Submit" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" /><br />
                 <hr />
