@@ -37,15 +37,21 @@ namespace SampleMasterPage
             {
                 if (CekTipeFile(fpGambar.FileName))
                 {
-                    string strUpload = Path.Combine("~/Images", fpGambar.FileName);
+                    string strRandom = Guid.NewGuid().ToString() +
+                        Path.GetExtension(fpGambar.FileName);
+                    string strUpload = Path.Combine("~/Images", strRandom);
                     strUpload = MapPath(strUpload);
                     fpGambar.SaveAs(strUpload);
-                    lblKeterangan.Text = fpGambar.FileName + " berhasil diupload !";
+                    lblKeterangan.Text = strRandom + " berhasil diupload !";
                 }
                 else
                 {
                     lblKeterangan.Text = "Gambar harus format gif, jpg, atau png";
                 }
+            }
+            else
+            {
+                lblKeterangan.Text = "<span class='alert alert-warning'>File tidak ditemukan</span>";
             }
         }
     }

@@ -11,7 +11,15 @@
         <asp:FileUpload ID="fpGambar" runat="server" /><br />
         <asp:Button Text="Upload Gambar" ID="btnUpload" runat="server" OnClick="btnUpload_Click" /><br />
         <hr />
-        <asp:Label ID="lblKeterangan" runat="server" />
+        <asp:Literal ID="lblKeterangan" runat="server" /><br />
+
+        <asp:DataList runat="server" ID="dlPhoto" RepeatColumns="3">
+            <ItemTemplate>
+                <asp:Image ImageUrl='<%# Eval("Name","~/Images/{0}") %>' Width="200px" runat="server" />
+            </ItemTemplate>
+        </asp:DataList>
+
+        <br /><br /><br />
 
     </div>
 </asp:Content>
