@@ -204,6 +204,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Sample.aspx" />
     <Content Include="SampleTheme1.aspx" />
+    <Content Include="SampleUpload.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -287,6 +288,13 @@
     <Compile Include="SampleTheme1.aspx.designer.cs">
       <DependentUpon>SampleTheme1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SampleUpload.aspx.cs">
+      <DependentUpon>SampleUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleUpload.aspx.designer.cs">
+      <DependentUpon>SampleUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -311,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -38,7 +38,7 @@
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
+                <%--<asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="respond" />
@@ -50,7 +50,7 @@
                 <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Name="WebFormsBundle" />--%>
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
@@ -235,9 +235,9 @@
         <!-- /#wrapper -->
 
         <!-- jQuery -->
-       <%-- <script src="Content/Startbootstrap/js/jquery.js"></script>--%>
+        <script src="Content/Startbootstrap/js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
-        <%--<script src="Content/Startbootstrap/js/bootstrap.min.js"></script>--%>
+        <script src="Content/Startbootstrap/js/bootstrap.min.js"></script>
     </form>
 </body>
 
