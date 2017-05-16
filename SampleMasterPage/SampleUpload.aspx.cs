@@ -31,6 +31,14 @@ namespace SampleMasterPage
             
         }
 
+        protected void Page_PreRender()
+        {
+            string strUpload = MapPath("~/Images");
+            DirectoryInfo dir = new DirectoryInfo(strUpload);
+            dlPhoto.DataSource = dir.GetFiles();
+            dlPhoto.DataBind();
+        }
+
         protected void btnUpload_Click(object sender, EventArgs e)
         {
             if (fpGambar.HasFile)

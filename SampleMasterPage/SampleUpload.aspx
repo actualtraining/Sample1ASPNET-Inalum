@@ -13,7 +13,7 @@
         <hr />
         <asp:Literal ID="lblKeterangan" runat="server" /><br />
 
-        <asp:DataList runat="server" ID="dlPhoto" RepeatColumns="3">
+        <asp:DataList runat="server" ID="dlPhoto" RepeatColumns="4">
             <ItemTemplate>
                 <asp:Image ImageUrl='<%# Eval("Name","~/Images/{0}") %>' Width="200px" runat="server" />
             </ItemTemplate>
