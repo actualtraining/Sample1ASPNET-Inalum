@@ -28,7 +28,25 @@ namespace SampleMasterPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+            if (fpGambar.HasFile)
+            {
+                if (CekTipeFile(fpGambar.FileName))
+                {
+                    string strUpload = Path.Combine("~/Images", fpGambar.FileName);
+                    strUpload = MapPath(strUpload);
+                    fpGambar.SaveAs(strUpload);
+                    lblKeterangan.Text = fpGambar.FileName + " berhasil diupload !";
+                }
+                else
+                {
+                    lblKeterangan.Text = "Gambar harus format gif, jpg, atau png";
+                }
+            }
         }
     }
 }

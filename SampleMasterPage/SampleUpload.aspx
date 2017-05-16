@@ -9,10 +9,9 @@
 
         <asp:Label Text="Masukan Gambar :" runat="server" />
         <asp:FileUpload ID="fpGambar" runat="server" /><br />
-        <asp:Button Text="Upload Gambar" ID="btnUpload" runat="server" /><br />
+        <asp:Button Text="Upload Gambar" ID="btnUpload" runat="server" OnClick="btnUpload_Click" /><br />
         <hr />
         <asp:Label ID="lblKeterangan" runat="server" />
 
-        <asp:TextBox runat="server" TextMode="MultiLine" />
     </div>
 </asp:Content>
