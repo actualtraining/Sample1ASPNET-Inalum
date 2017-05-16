@@ -42,6 +42,12 @@
                     ControlToValidate="txtUmur" Operator="DataTypeCheck" 
                     Type="Currency" runat="server" /><br /><br />
 
+                <asp:Label Text="Range Umur :" runat="server" /><br />
+                <asp:TextBox runat="server" ID="txtRangeUmur" />
+                <asp:RangeValidator ErrorMessage="{Umur harus 17 - 65}" 
+                    ControlToValidate="txtRangeUmur" MinimumValue="17" 
+                    MaximumValue="65" runat="server" /><br /><br />
+
 
                 <asp:Button Text="Submit" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" /><br />
                 <hr />
