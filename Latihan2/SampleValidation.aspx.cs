@@ -18,5 +18,13 @@ namespace Latihan2
         {
             lblHasil.Text = txtFirstName.Text + " " + txtLastName.Text;
         }
+
+        protected void cvNik_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (args.Value.Length == 8 && args.Value.ToUpper().StartsWith("IN"))
+                args.IsValid = true;
+            else
+                args.IsValid = false;
+        }
     }
 }
