@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SampleValidation.aspx.cs" Inherits="Latihan2.SampleValidation" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" UnobtrusiveValidationMode="None" CodeBehind="SampleValidation.aspx.cs" Inherits="Latihan2.SampleValidation" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,13 @@
                     ControlToValidate="txtFirstName" ForeColor="Red" runat="server" />
                 <br /><br />
 
-                <asp:Button Text="Submit" ID="btnSubmit" runat="server" /><br />
+                <asp:Label Text="Last Name :" runat="server" /><br />
+                <asp:TextBox runat="server" ID="txtLastName" />
+                <asp:RequiredFieldValidator ErrorMessage="{Last Name Required}" 
+                    ControlToValidate="txtLastName" ForeColor="Red" runat="server" />
+                <br /><br />
+
+                <asp:Button Text="Submit" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" /><br />
                 <hr />
                 <asp:Label ID="lblHasil" runat="server" />
             </fieldset>

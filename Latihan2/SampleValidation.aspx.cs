@@ -13,5 +13,10 @@ namespace Latihan2
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            lblHasil.Text = txtFirstName.Text + " " + txtLastName.Text;
+        }
     }
 }
