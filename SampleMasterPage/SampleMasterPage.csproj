@@ -205,6 +205,7 @@
     <Content Include="Sample.aspx" />
     <Content Include="SampleTheme1.aspx" />
     <Content Include="SampleUpload.aspx" />
+    <Content Include="SampleWizardControl.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -294,6 +295,13 @@
     </Compile>
     <Compile Include="SampleUpload.aspx.designer.cs">
       <DependentUpon>SampleUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleWizardControl.aspx.cs">
+      <DependentUpon>SampleWizardControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleWizardControl.aspx.designer.cs">
+      <DependentUpon>SampleWizardControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
