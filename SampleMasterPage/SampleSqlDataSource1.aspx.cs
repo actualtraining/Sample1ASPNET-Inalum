@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using System.Data.SqlClient;
+using System.Data;
 
 namespace SampleMasterPage
 {
@@ -58,6 +59,15 @@ namespace SampleMasterPage
             catch (Exception ex)
             {
                 ltError.Text = "<span class='alert alert-success'>" + ex.Message + "</span>";
+            }
+        }
+
+        protected void btnSelectManual_Click(object sender, EventArgs e)
+        {
+            DataView results = (DataView)sdsKategori.Select(DataSourceSelectArguments.Empty);
+            foreach(DataRow row in results.Table.Rows)
+            {
+                ltResult.Text += row[0].ToString() + " " + row[1].ToString() + "<br/>";
             }
         }
     }

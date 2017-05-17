@@ -39,7 +39,9 @@
                 <Fields>
                     <asp:BoundField DataField="KategoriID" HeaderText="KategoriID" InsertVisible="False" ReadOnly="True" SortExpression="KategoriID" />
                     <asp:BoundField DataField="NamaKategori" HeaderText="Nama Kategori" SortExpression="NamaKategori" />
-                    <asp:CommandField ShowInsertButton="True" />
+                    <asp:CommandField ShowInsertButton="True" ShowCancelButton="false" ButtonType="Button" CancelText="" >
+                    <ControlStyle CssClass="btn btn-default" />
+                    </asp:CommandField>
                 </Fields>
             </asp:DetailsView>
             <br /><br />
@@ -49,6 +51,10 @@
             &nbsp;
             <asp:Button Text="Edit Manual" ID="btnEditManual" CssClass="btn btn-primary" 
                 OnClick="btnEditManual_Click" runat="server" />
+            &nbsp;
+            <asp:Button Text="Select Manual" ID="btnSelectManual" CssClass="btn btn-default"
+               OnClick="btnSelectManual_Click" runat="server" /><br />
+            <asp:Literal ID="ltResult" runat="server" />
         </div>
 
         <div class="col-lg-8">
