@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//using System.Data.SqlClient;
+
 namespace SampleMasterPage
 {
     public partial class SampleSqlDataSource1 : System.Web.UI.Page
@@ -18,11 +20,22 @@ namespace SampleMasterPage
         {
             if (e.Exception != null)
             {
-                ltError.Text = "<span class='alert alert-danger'>Error: " + e.Exception.Message + "</span>";
+                ltError.Text = "<span class='alert alert-danger'>Error:"+e.Exception.Message+"</span>";
                 e.ExceptionHandled = true;
             }
         }
 
-       
+        protected void sdsKategori_Inserting(object sender, SqlDataSourceCommandEventArgs e)
+        {
+            foreach(System.Data.SqlClient.SqlParameter par in e.Command.Parameters)
+            {
+                if (par.Value == null)
+                {
+                    e.Cancel = true;
+                    ltError.Text = "<span class='alert alert-danger'>Error: Field " + 
+                        par.ParameterName + " harus diisi ! </span>";
+                }
+            }
+        }
     }
 }

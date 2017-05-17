@@ -15,7 +15,7 @@
             UpdateCommand="UPDATE [Kategori] SET [NamaKategori] = @NamaKategori WHERE [KategoriID] = @KategoriID"
             FilterExpression="NamaKategori like '%{0}%'" 
             OnSelected="sdsKategoriError" OnUpdated="sdsKategoriError" OnDeleted="sdsKategoriError" 
-            OnInserted="sdsKategoriError">
+            OnInserted="sdsKategoriError" OnInserting="sdsKategori_Inserting">
             <FilterParameters>
                 <asp:ControlParameter ControlID="txtSearch" Name="NamaKategori" />
             </FilterParameters>
