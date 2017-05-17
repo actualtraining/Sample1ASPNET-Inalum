@@ -15,19 +15,24 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <label class="control-label col-sm-2" for="pwd">Culinary :</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                        <asp:DropDownList runat="server" ID="ddCulinary" CssClass="form-control">
+                        </asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <asp:Button Text="Submit" ID="btnSubmit" CssClass="btn btn-success"
+                            runat="server" OnClick="btnSubmit_Click" />
                     </div>
                 </div>
             </div>
+
+            <hr />
+            <asp:Label ID="lblKeterangan" runat="server" />
         </div>
 
-
+       
     </div>
 </asp:Content>
