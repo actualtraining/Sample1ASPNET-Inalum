@@ -13,7 +13,8 @@
             DeleteCommand="DELETE FROM [Kategori] WHERE [KategoriID] = @KategoriID"
             InsertCommand="INSERT INTO [Kategori] ([NamaKategori]) VALUES (@NamaKategori)"
             UpdateCommand="UPDATE [Kategori] SET [NamaKategori] = @NamaKategori WHERE [KategoriID] = @KategoriID"
-            FilterExpression="NamaKategori like '%{0}%'">
+            FilterExpression="NamaKategori like '%{0}%'" 
+            OnSelected="sdsKategori_Selected" OnInserted="sdsKategori_Inserted">
             <FilterParameters>
                 <asp:ControlParameter ControlID="txtSearch" Name="NamaKategori" />
             </FilterParameters>
@@ -29,6 +30,8 @@
             </UpdateParameters>
         </asp:SqlDataSource>
 
+        <asp:Literal ID="ltError" runat="server" /><br /><br />
+        <br />
         <div class="col-lg-4">
             <asp:DetailsView runat="server" ID="dvKategori" AutoGenerateRows="False" CssClass="table"
                 DataKeyNames="KategoriID" DataSourceID="sdsKategori" DefaultMode="Insert">
@@ -58,6 +61,9 @@
                     <asp:BoundField DataField="NamaKategori" HeaderText="Nama Kategori" SortExpression="NamaKategori" />
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 </Columns>
+                <EmptyDataTemplate>
+                    Data yang anda cari tidak ditemukan...
+                </EmptyDataTemplate>
             </asp:GridView>
         </div>
     </div>

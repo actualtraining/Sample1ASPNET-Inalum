@@ -13,5 +13,23 @@ namespace SampleMasterPage
         {
 
         }
+
+        protected void sdsKategori_Selected(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            if (e.Exception != null)
+            {
+                ltError.Text = "<span class='alert alert-danger'>Error: " + e.Exception.Message + "</span>";
+                e.ExceptionHandled = true;
+            }
+        }
+
+        protected void sdsKategori_Inserted(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            if (e.Exception != null)
+            {
+                ltError.Text = "<span class='alert alert-danger'>Error: " + e.Exception.Message + "</span>";
+                e.ExceptionHandled = true;
+            }
+        }
     }
 }
