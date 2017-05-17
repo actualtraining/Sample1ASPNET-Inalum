@@ -42,6 +42,10 @@
                     <asp:CommandField ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
+            <br /><br />
+
+            <asp:Button Text="Insert Manual" ID="btnInsertManual" 
+                OnClick="btnInsertManual_Click" CssClass="btn btn-warning" runat="server" />
         </div>
 
         <div class="col-lg-8">
