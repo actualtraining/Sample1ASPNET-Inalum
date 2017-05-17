@@ -18,9 +18,7 @@
                 <Columns>
                     <asp:BoundField DataField="KategoriID" HeaderText="KategoriID" InsertVisible="False"
                         ReadOnly="True" SortExpression="KategoriID" />
-                    <asp:BoundField DataField="NamaKategori" HeaderText="NamaKategori" SortExpression="NamaKategori" >
-                    <HeaderStyle CssClass="myThStyle" />
-                    </asp:BoundField>
+                    <asp:BoundField DataField="NamaKategori" HeaderText="NamaKategori" SortExpression="NamaKategori" />
                 </Columns>
             </asp:GridView>
         </div>

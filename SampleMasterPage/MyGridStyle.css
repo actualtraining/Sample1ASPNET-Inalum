@@ -1,3 +1,7 @@
-﻿.myThStyle {
+﻿/*.myThStyle {
+    text-align: center
+}*/
+
+th {
     text-align: center
 }
