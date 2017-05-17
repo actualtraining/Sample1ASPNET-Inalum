@@ -31,7 +31,8 @@ namespace SampleMasterPage
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            lblKeterangan.Text = "Sport : " + ddSport.SelectedValue + " Culinary : " + ddCulinary.SelectedValue;
+            lblKeterangan.Text = "Sport : " + ddSport.SelectedValue + " Culinary : " + ddCulinary.SelectedValue +
+                " Nama :" + txtNama.Text;
         }
     }
 }

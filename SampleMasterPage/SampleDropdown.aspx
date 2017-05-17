@@ -22,6 +22,12 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Nama :</label>
+                    <div class="col-sm-10">
+                        <asp:TextBox runat="server" ID="txtNama" CssClass="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <asp:Button Text="Submit" ID="btnSubmit" CssClass="btn btn-success"
                             runat="server" OnClick="btnSubmit_Click" />
@@ -30,6 +36,7 @@
             </div>
 
             <hr />
+
             <asp:Label ID="lblKeterangan" runat="server" />
         </div>
 

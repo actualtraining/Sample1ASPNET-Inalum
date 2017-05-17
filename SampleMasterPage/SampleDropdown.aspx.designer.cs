@@ -31,6 +31,15 @@ namespace SampleMasterPage {
         protected global::System.Web.UI.WebControls.DropDownList ddCulinary;
         
         /// <summary>
+        /// txtNama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNama;
+        
+        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>

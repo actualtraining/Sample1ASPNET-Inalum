@@ -203,6 +203,8 @@
     <Content Include="MyTheme.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Sample.aspx" />
+    <Content Include="SampleDropdown.aspx" />
+    <Content Include="SampleSqlDataSource1.aspx" />
     <Content Include="SampleTheme1.aspx" />
     <Content Include="SampleUpload.aspx" />
     <Content Include="SampleWizardControl.aspx" />
@@ -281,6 +283,20 @@
     </Compile>
     <Compile Include="Sample.aspx.designer.cs">
       <DependentUpon>Sample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleDropdown.aspx.cs">
+      <DependentUpon>SampleDropdown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleDropdown.aspx.designer.cs">
+      <DependentUpon>SampleDropdown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleSqlDataSource1.aspx.cs">
+      <DependentUpon>SampleSqlDataSource1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleSqlDataSource1.aspx.designer.cs">
+      <DependentUpon>SampleSqlDataSource1.aspx</DependentUpon>
     </Compile>
     <Compile Include="SampleTheme1.aspx.cs">
       <DependentUpon>SampleTheme1.aspx</DependentUpon>
