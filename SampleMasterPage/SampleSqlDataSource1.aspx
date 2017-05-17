@@ -14,7 +14,8 @@
             InsertCommand="INSERT INTO [Kategori] ([NamaKategori]) VALUES (@NamaKategori)"
             UpdateCommand="UPDATE [Kategori] SET [NamaKategori] = @NamaKategori WHERE [KategoriID] = @KategoriID"
             FilterExpression="NamaKategori like '%{0}%'" 
-            OnSelected="sdsKategori_Selected" OnInserted="sdsKategori_Inserted">
+            OnSelected="sdsKategoriError" OnUpdated="sdsKategoriError" OnDeleted="sdsKategoriError" 
+            OnInserted="sdsKategoriError">
             <FilterParameters>
                 <asp:ControlParameter ControlID="txtSearch" Name="NamaKategori" />
             </FilterParameters>
@@ -30,7 +31,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
 
-        <asp:Literal ID="ltError" runat="server" /><br /><br />
+        <asp:Literal ID="ltError" runat="server" EnableViewState="false" /><br /><br />
         <br />
         <div class="col-lg-4">
             <asp:DetailsView runat="server" ID="dvKategori" AutoGenerateRows="False" CssClass="table"
