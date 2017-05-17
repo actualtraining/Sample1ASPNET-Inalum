@@ -46,6 +46,9 @@
 
             <asp:Button Text="Insert Manual" ID="btnInsertManual" 
                 OnClick="btnInsertManual_Click" CssClass="btn btn-warning" runat="server" />
+            &nbsp;
+            <asp:Button Text="Edit Manual" ID="btnEditManual" CssClass="btn btn-primary" 
+                OnClick="btnEditManual_Click" runat="server" />
         </div>
 
         <div class="col-lg-8">

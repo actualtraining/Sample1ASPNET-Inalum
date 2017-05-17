@@ -44,5 +44,21 @@ namespace SampleMasterPage
             sdsKategori.Insert();
             gvKategori.DataBind();
         }
+
+        protected void btnEditManual_Click(object sender, EventArgs e)
+        {
+            sdsKategori.UpdateParameters[0].DefaultValue = "Swift Update";
+            sdsKategori.UpdateParameters[1].DefaultValue = "11";
+            try
+            {
+                sdsKategori.Update();
+                ltError.Text = "<span class='alert alert-success'>Data berhasil diupdate !</span>";
+                gvKategori.DataBind();
+            }
+            catch (Exception ex)
+            {
+                ltError.Text = "<span class='alert alert-success'>" + ex.Message + "</span>";
+            }
+        }
     }
 }
