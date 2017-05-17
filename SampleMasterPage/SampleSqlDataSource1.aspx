@@ -12,7 +12,11 @@
             SelectCommand="SELECT [KategoriID], [NamaKategori] FROM [Kategori]"
             DeleteCommand="DELETE FROM [Kategori] WHERE [KategoriID] = @KategoriID"
             InsertCommand="INSERT INTO [Kategori] ([NamaKategori]) VALUES (@NamaKategori)"
-            UpdateCommand="UPDATE [Kategori] SET [NamaKategori] = @NamaKategori WHERE [KategoriID] = @KategoriID">
+            UpdateCommand="UPDATE [Kategori] SET [NamaKategori] = @NamaKategori WHERE [KategoriID] = @KategoriID"
+            FilterExpression="NamaKategori like '%{0}%'">
+            <FilterParameters>
+                <asp:ControlParameter ControlID="txtSearch" Name="NamaKategori" />
+            </FilterParameters>
             <DeleteParameters>
                 <asp:Parameter Name="KategoriID" Type="Int32" />
             </DeleteParameters>
@@ -39,7 +43,7 @@
         <div class="col-lg-8">
             <div class="form-inline">
                 <div class="form-group">
-                    <label for="email">Search Nama Kategori :</label>
+                    <label for="txtSearch">Nama Kategori :</label>
                     <asp:TextBox runat="server" ID="txtSearch" CssClass="form-control" />
                 </div>
                 <asp:Button Text="Search" ID="btnSearch" CssClass="btn btn-primary btn-sm" runat="server" />
@@ -49,9 +53,9 @@
                 DataKeyNames="KategoriID" DataSourceID="sdsKategori" CssClass="table table-striped table-hover"
                 AllowPaging="True" AllowSorting="True" PageSize="5">
                 <Columns>
-                    <asp:BoundField DataField="KategoriID" HeaderText="KategoriID" InsertVisible="False"
+                    <asp:BoundField DataField="KategoriID" HeaderText="Kategori ID" InsertVisible="False"
                         ReadOnly="True" SortExpression="KategoriID" />
-                    <asp:BoundField DataField="NamaKategori" HeaderText="NamaKategori" SortExpression="NamaKategori" />
+                    <asp:BoundField DataField="NamaKategori" HeaderText="Nama Kategori" SortExpression="NamaKategori" />
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 </Columns>
             </asp:GridView>
