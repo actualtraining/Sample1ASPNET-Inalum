@@ -17,15 +17,27 @@ namespace SampleMasterPage
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            RegistrasiDAL regDal = new RegistrasiDAL();
+            //dengan ADO.NET manual
+            /*RegistrasiDAL regDal = new RegistrasiDAL();
             try
             {
                 regDal.TambahDataRegistrasi(txtUsername.Text, txtPassword.Text, txtAturan.Text);
                 ltKeterangan.Text = "<span class='alert alert-success'> Proses registrasi berhasil !</span>";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ltKeterangan.Text = "<span class='alert alert-error'> Proses registrasi gagal !</span>";
+                ltKeterangan.Text = "<span class='alert alert-error'> Error : " + ex.Message + "</span>";
+            }*/
+
+            //dengan sqldatasource 
+            try
+            {
+                sdsRegistrasi.Insert();
+                ltKeterangan.Text = "<span class='alert alert-success'> Proses registrasi berhasil !</span>";
+            }
+            catch (Exception ex)
+            {
+                ltKeterangan.Text = "<span class='alert alert-error'> Error : " + ex.Message + "</span>";
             }
         }
     }

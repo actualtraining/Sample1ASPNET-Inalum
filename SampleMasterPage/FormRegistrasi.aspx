@@ -4,8 +4,20 @@
     <div class="col-lg-12">
         <h1 class="page-header">Sample SQL Datasource</h1>
 
-        <asp:Literal ID="ltKeterangan" EnableViewState="false" runat="server" />
+        <asp:Literal ID="ltKeterangan" EnableViewState="false" runat="server" /><br />
+        <hr />
         <div class="col-lg-6">
+            <asp:SqlDataSource runat="server" ID="sdsRegistrasi" 
+                ConnectionString="<%$ ConnectionStrings:InalumDbConnectionString %>" 
+                InsertCommand="insert into Pengguna(Username,Password,Aturan) 
+                values(@Username,CONVERT(varchar(32),HASHBYTES('md5',@Password),2),@Aturan)">
+                <InsertParameters>
+                    <asp:ControlParameter ControlID="txtUsername" Name="Username" PropertyName="Text" Type="String" />
+                    <asp:ControlParameter ControlID="txtPassword" Name="Password" PropertyName="Text" Type="String" />
+                    <asp:ControlParameter ControlID="txtAturan" Name="Aturan" PropertyName="Text" Type="String" />
+                </InsertParameters>
+            </asp:SqlDataSource>
+
             <div>
                 <div class="form-group">
                     <label for="txtUsername">Username :</label>
