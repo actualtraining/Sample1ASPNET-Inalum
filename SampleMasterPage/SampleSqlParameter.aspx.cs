@@ -17,5 +17,20 @@ namespace SampleMasterPage
                 gvBuku.EmptyDataText = "Data tidak ditemukan...";
             }
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            upKategori.Update();
+        }
+
+        protected void btnSearchJudul_Click(object sender, EventArgs e)
+        {
+            upBuku.Update();
+        }
+
+        protected void ddKategori_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            upBeritaDropdown.Update();
+        }
     }
 }

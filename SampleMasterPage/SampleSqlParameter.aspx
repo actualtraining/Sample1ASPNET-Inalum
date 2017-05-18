@@ -5,13 +5,13 @@
         <h1 class="page-header">Sample SQL Datasource</h1>
 
         <div class="col-lg-6">
-            <asp:UpdatePanel runat="server" ID="upKategori">
+            <asp:UpdatePanel runat="server" ID="upKategori" UpdateMode="Conditional">
                 <ContentTemplate>
                     <label for="txtSearch">Masukan Nama :</label>
                     <asp:TextBox runat="server" ID="txtSearch" />
-                    <asp:Button Text="Search" ID="btnSearch" runat="server" />
+                    <asp:Button Text="Search" ID="btnSearch" CssClass="btn btn-warning" runat="server" 
+                        OnClick="btnSearch_Click" />
                     <br />
-
                     <asp:SqlDataSource runat="server" ID="sdsKategori"
                         ConnectionString="<%$ ConnectionStrings:InalumDbConnectionString %>"
                         SelectCommand="SELECT [KategoriID], [NamaKategori] FROM [Kategori] 
@@ -35,7 +35,7 @@
         </div>
         <div class="col-lg-6 pre-scrollable">
 
-            <asp:UpdatePanel runat="server" ID="upBuku">
+            <asp:UpdatePanel runat="server" ID="upBuku" UpdateMode="Conditional">
                 <ContentTemplate>
                     <asp:SqlDataSource runat="server" ID="sdsBuku"
                         ConnectionString="<%$ ConnectionStrings:InalumDbConnectionString %>"
@@ -50,7 +50,8 @@
                     <label for="txtSearchKeyword">Masukan Keyword :</label>
                     <asp:TextBox runat="server" ID="txtSearchKeyword" /><br />
 
-                    <asp:Button Text="Search" ID="btnSearchJudul" CssClass="btn btn-primary" runat="server" />
+                    <asp:Button Text="Search" ID="btnSearchJudul" CssClass="btn btn-primary"
+                        OnClick="btnSearchJudul_Click" runat="server" />
                     <br />
                     <br />
                     <asp:GridView runat="server" ID="gvBuku" CssClass="table table-striped" AutoGenerateColumns="False" DataKeyNames="KodeBuku" DataSourceID="sdsBuku">
@@ -73,7 +74,7 @@
     <div class="col-lg-12">
         <div class="col-lg-6 pre-scrollable">
 
-            <asp:UpdatePanel runat="server" ID="upBeritaDropdown">
+            <asp:UpdatePanel runat="server" ID="upBeritaDropdown" UpdateMode="Conditional">
                 <ContentTemplate>
                     <asp:SqlDataSource runat="server" ID="sdsKategoriDropdown" ConnectionString="<%$ ConnectionStrings:InalumDbConnectionString %>"
                         SelectCommand="SELECT * FROM [Kategori] ORDER BY [NamaKategori]" />
@@ -87,7 +88,7 @@
                     <label for="ddKategori">Pilih Kategori :</label>
                     <asp:DropDownList runat="server" ID="ddKategori" AutoPostBack="true"
                         DataSourceID="sdsKategoriDropdown"
-                        DataTextField="NamaKategori" DataValueField="KategoriID">
+                        DataTextField="NamaKategori" DataValueField="KategoriID" OnSelectedIndexChanged="ddKategori_SelectedIndexChanged">
                     </asp:DropDownList><br />
 
                     <asp:GridView runat="server" ID="gvBukuDetail" CssClass="table table-striped"
