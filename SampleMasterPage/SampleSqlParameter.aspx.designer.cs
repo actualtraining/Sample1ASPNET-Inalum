@@ -13,6 +13,15 @@ namespace SampleMasterPage {
     public partial class SampleSqlParameter {
         
         /// <summary>
+        /// upKategori control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upKategori;
+        
+        /// <summary>
         /// txtSearch control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace SampleMasterPage {
         protected global::System.Web.UI.WebControls.GridView gvKategori;
         
         /// <summary>
+        /// upBuku control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upBuku;
+        
+        /// <summary>
         /// sdsBuku control.
         /// </summary>
         /// <remarks>
@@ -58,13 +76,13 @@ namespace SampleMasterPage {
         protected global::System.Web.UI.WebControls.SqlDataSource sdsBuku;
         
         /// <summary>
-        /// txtSearchJudul control.
+        /// txtSearchKeyword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearchJudul;
+        protected global::System.Web.UI.WebControls.TextBox txtSearchKeyword;
         
         /// <summary>
         /// btnSearchJudul control.
@@ -83,5 +101,50 @@ namespace SampleMasterPage {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvBuku;
+        
+        /// <summary>
+        /// upBeritaDropdown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upBeritaDropdown;
+        
+        /// <summary>
+        /// sdsKategoriDropdown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsKategoriDropdown;
+        
+        /// <summary>
+        /// sdsBukuDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsBukuDetail;
+        
+        /// <summary>
+        /// ddKategori control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddKategori;
+        
+        /// <summary>
+        /// gvBukuDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvBukuDetail;
     }
 }
