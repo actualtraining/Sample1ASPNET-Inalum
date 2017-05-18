@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
 
 namespace SampleMasterPage
 {
@@ -69,6 +70,30 @@ namespace SampleMasterPage
             {
                 ltResult.Text += row[0].ToString() + " " + row[1].ToString() + "<br/>";
             }
+        }
+
+        protected void btnExportToExcel_Click(object sender, EventArgs e)
+        {
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.xls");
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+            using(StringWriter sw = new StringWriter())
+            {
+                HtmlTextWriter hw = new HtmlTextWriter(sw);
+                gvKategori.AllowPaging = false;
+                gvKategori.DataBind();
+                gvKategori.RenderControl(hw);
+                Response.Write(sw.ToString());
+                Response.Flush();
+                Response.End();
+            }
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            
         }
     }
 }

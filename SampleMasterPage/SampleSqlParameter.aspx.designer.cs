@@ -10,70 +10,7 @@
 namespace SampleMasterPage {
     
     
-    public partial class SampleSqlDataSource1 {
-        
-        /// <summary>
-        /// sdsKategori control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sdsKategori;
-        
-        /// <summary>
-        /// ltError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltError;
-        
-        /// <summary>
-        /// dvKategori control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView dvKategori;
-        
-        /// <summary>
-        /// btnInsertManual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInsertManual;
-        
-        /// <summary>
-        /// btnEditManual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditManual;
-        
-        /// <summary>
-        /// btnSelectManual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSelectManual;
-        
-        /// <summary>
-        /// ltResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltResult;
+    public partial class SampleSqlParameter {
         
         /// <summary>
         /// txtSearch control.
@@ -94,6 +31,15 @@ namespace SampleMasterPage {
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
+        /// sdsKategori control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsKategori;
+        
+        /// <summary>
         /// gvKategori control.
         /// </summary>
         /// <remarks>
@@ -103,12 +49,39 @@ namespace SampleMasterPage {
         protected global::System.Web.UI.WebControls.GridView gvKategori;
         
         /// <summary>
-        /// btnExportToExcel control.
+        /// sdsBuku control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExportToExcel;
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsBuku;
+        
+        /// <summary>
+        /// txtSearchJudul control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSearchJudul;
+        
+        /// <summary>
+        /// btnSearchJudul control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearchJudul;
+        
+        /// <summary>
+        /// gvBuku control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvBuku;
     }
 }

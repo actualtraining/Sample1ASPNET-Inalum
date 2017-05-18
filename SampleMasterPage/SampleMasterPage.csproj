@@ -206,6 +206,7 @@
     <Content Include="Sample.aspx" />
     <Content Include="SampleDropdown.aspx" />
     <Content Include="SampleSqlDataSource1.aspx" />
+    <Content Include="SampleSqlParameter.aspx" />
     <Content Include="SampleTheme1.aspx" />
     <Content Include="SampleUpload.aspx" />
     <Content Include="SampleWizardControl.aspx" />
@@ -298,6 +299,13 @@
     </Compile>
     <Compile Include="SampleSqlDataSource1.aspx.designer.cs">
       <DependentUpon>SampleSqlDataSource1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleSqlParameter.aspx.cs">
+      <DependentUpon>SampleSqlParameter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleSqlParameter.aspx.designer.cs">
+      <DependentUpon>SampleSqlParameter.aspx</DependentUpon>
     </Compile>
     <Compile Include="SampleTheme1.aspx.cs">
       <DependentUpon>SampleTheme1.aspx</DependentUpon>

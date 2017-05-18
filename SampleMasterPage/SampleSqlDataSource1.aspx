@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyTheme.Master" AutoEventWireup="true" CodeBehind="SampleSqlDataSource1.aspx.cs" Inherits="SampleMasterPage.SampleSqlDataSource1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyTheme.Master" AutoEventWireup="true" 
+    EnableEventValidation="false"
+    CodeBehind="SampleSqlDataSource1.aspx.cs" Inherits="SampleMasterPage.SampleSqlDataSource1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
 
@@ -54,7 +56,7 @@
             &nbsp;
             <asp:Button Text="Select Manual" ID="btnSelectManual" CssClass="btn btn-default"
                OnClick="btnSelectManual_Click" runat="server" /><br />
-            <asp:Literal ID="ltResult" runat="server" />
+            <asp:Literal ID="ltResult" runat="server" EnableViewState="false" />
         </div>
 
         <div class="col-lg-8">
@@ -78,7 +80,9 @@
                 <EmptyDataTemplate>
                     Data yang anda cari tidak ditemukan...
                 </EmptyDataTemplate>
-            </asp:GridView>
+            </asp:GridView><br />
+            <asp:Button Text="Export To Excel" ID="btnExportToExcel" CssClass="btn btn-success" runat="server" 
+                OnClick="btnExportToExcel_Click" />
         </div>
     </div>
 </asp:Content>
