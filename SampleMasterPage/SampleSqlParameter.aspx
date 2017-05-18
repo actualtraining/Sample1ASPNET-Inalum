@@ -88,7 +88,8 @@
                     <label for="ddKategori">Pilih Kategori :</label>
                     <asp:DropDownList runat="server" ID="ddKategori" AutoPostBack="true"
                         DataSourceID="sdsKategoriDropdown"
-                        DataTextField="NamaKategori" DataValueField="KategoriID" OnSelectedIndexChanged="ddKategori_SelectedIndexChanged">
+                        DataTextField="NamaKategori" DataValueField="KategoriID" 
+                        OnSelectedIndexChanged="ddKategori_SelectedIndexChanged">
                     </asp:DropDownList><br />
 
                     <asp:GridView runat="server" ID="gvBukuDetail" CssClass="table table-striped"
