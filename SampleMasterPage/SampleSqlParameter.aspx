@@ -31,7 +31,9 @@
             </asp:GridView>
         </div>
         <div class="col-lg-6 pre-scrollable">
-            <asp:SqlDataSource runat="server" ID="sdsBuku" ConnectionString="<%$ ConnectionStrings:InalumDbConnectionString %>" SelectCommand="SELECT [KodeBuku], [Judul], [Deskripsi], [Pengarang], [TahunTerbit], [Harga], [ISBN], [Penerbit] FROM [Buku] WHERE ([Judul] LIKE '%' + @Judul + '%')">
+            <asp:SqlDataSource runat="server" ID="sdsBuku" 
+                ConnectionString="<%$ ConnectionStrings:InalumDbConnectionString %>" 
+                SelectCommand="SELECT [KodeBuku], [Judul], [Deskripsi], [Pengarang], [TahunTerbit], [Harga], [ISBN], [Penerbit] FROM [Buku] WHERE ([Judul] LIKE '%' + @Judul + '%')">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="txtSearchJudul" Name="Judul" PropertyName="Text" Type="String" />
                 </SelectParameters>
@@ -40,7 +42,7 @@
             <label for="txtSearch">Masukan Judul :</label>
             <asp:TextBox runat="server" ID="txtSearchJudul" CssClass="form-control" />
             <asp:Button Text="Search" ID="btnSearchJudul" CssClass="btn btn-primary" runat="server" />
-            <br />
+            <br /><br />
             <asp:GridView runat="server" ID="gvBuku" CssClass="table table-striped" AutoGenerateColumns="False" DataKeyNames="KodeBuku" DataSourceID="sdsBuku">
                 <Columns>
                     <asp:BoundField DataField="KodeBuku" HeaderText="KodeBuku" ReadOnly="True" SortExpression="KodeBuku" />
