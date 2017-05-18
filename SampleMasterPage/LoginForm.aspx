@@ -20,8 +20,9 @@
                         <input type="checkbox">
                         Remember me</label>
                 </div>
-                <asp:Button Text="Login" ID="btnLogin" CssClass="btn btn-success" runat="server" />
+                <asp:Button Text="Login" ID="btnLogin" CssClass="btn btn-success" OnClick="btnLogin_Click" runat="server" />
             </div>
+            <asp:Literal ID="ltKeterangan" runat="server" />
         </div>
 
     </div>
