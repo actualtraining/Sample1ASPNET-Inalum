@@ -192,6 +192,12 @@
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
+                        <%--Cek apakah session sudah dibuat--%>
+                        <% if (Session["pengguna"] != null)
+                            { %>
+                        <%--cek hak akses / aturan--%>
+                        <% if (((SampleMasterPage.DAL.Pengguna)Session["pengguna"]).Aturan == "admin")
+                                                      { %>
                         <li>
                             <a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Dashboard</a>
                         </li>
@@ -201,6 +207,9 @@
                         <li>
                             <a href="tables.html"><i class="fa fa-fw fa-table"></i>Tables</a>
                         </li>
+                        <% }
+                                                      else if (((SampleMasterPage.DAL.Pengguna)Session["pengguna"]).Aturan == "hrd")
+                                                      { %>
                         <li>
                             <a href="forms.html"><i class="fa fa-fw fa-edit"></i>Forms</a>
                         </li>
@@ -227,6 +236,8 @@
                         <li>
                             <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i>RTL Dashboard</a>
                         </li>
+                        <% } %>
+                        <% } %>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
