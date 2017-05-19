@@ -237,6 +237,7 @@
     <Content Include="InalumDbDataSet.xsc">
       <DependentUpon>InalumDbDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="WebForm2.aspx" />
     <None Include="InalumDbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>InalumDbDataSet.Designer.cs</LastGenOutput>
@@ -245,6 +246,18 @@
     <Content Include="InalumDbDataSet.xss">
       <DependentUpon>InalumDbDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="MyInalumDbDataSet.xsc">
+      <DependentUpon>MyInalumDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="MyInalumDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyInalumDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="MyInalumDbDataSet.xss">
+      <DependentUpon>MyInalumDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Sample.aspx" />
     <Content Include="SampleDropdown.aspx" />
@@ -369,6 +382,11 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MyInalumDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyInalumDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MyTheme.Master.cs">
       <DependentUpon>MyTheme.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -469,6 +487,13 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -486,6 +511,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Report\Report1.rdlc" />
+    <EmbeddedResource Include="Report\ReportKategori.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
