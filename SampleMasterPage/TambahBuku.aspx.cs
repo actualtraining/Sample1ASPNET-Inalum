@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using SampleMasterPage.DAL;
+
 namespace SampleMasterPage
 {
     public partial class TambahBuku : System.Web.UI.Page
@@ -47,6 +49,12 @@ namespace SampleMasterPage
                 }
                 
             }
+        }
+
+        protected void txtKodeBuku_TextChanged(object sender, EventArgs e)
+        {
+            SampleFocus objFocus = new SampleFocus();
+            txtNamaBuku.Text = objFocus.GetNamaBuku(txtKodeBuku.Text);
         }
     }
 }

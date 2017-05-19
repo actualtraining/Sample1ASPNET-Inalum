@@ -118,9 +118,15 @@
                 </InsertItemTemplate>
                 <ItemTemplate></ItemTemplate>
             </asp:ListView>
-
-
         </div>
 
+        <div class="col-lg-6">
+            <label for="txtKodeBuku">Kode Buku :</label><br />
+            <asp:TextBox runat="server" ID="txtKodeBuku" AutoPostBack="true" OnTextChanged="txtKodeBuku_TextChanged" /><br /><br />
+
+            <label for="txtNama
+                Buku">Nama Buku :</label><br />
+            <asp:TextBox runat="server" ID="txtNamaBuku" /><br /><br />
+        </div>
     </div>
 </asp:Content>
