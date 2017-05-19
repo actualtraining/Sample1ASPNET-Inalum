@@ -51,7 +51,8 @@
                             <div class="col-sm-8">
                                 <asp:DropDownList runat="server" ID="ddKategori" CssClass="form-control"
                                     DataSourceID="sdsKategori"
-                                    DataTextField="NamaKategori" DataValueField="KategoriID" SelectedValue='<%# Bind("KategoriID") %>' />
+                                    DataTextField="NamaKategori" DataValueField="KategoriID" 
+                                    SelectedValue='<%# Bind("KategoriID") %>' />
                             </div>
                         </div>
                         <div class="form-group">
