@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -19,11 +20,32 @@ namespace SampleMasterPage
             if (e.Exception != null)
             {
                 e.ExceptionHandled = true;
-                ltKeterangan.Text = "<span class='alert alert-warning'>" + e.Exception.Message + "</span>";
+                ltKeterangan.Text = "<span class='alert alert-danger'>" + e.Exception.Message + "</span>";
             }
             else
             {
-                ltKeterangan.Text = "<span class='alert alert-warning'>Data buku berhasil ditambah </span>";
+                //upload pic
+                try
+                {
+                    FileUpload fpUpload = (FileUpload)lvTambahBuku.InsertItem.FindControl("fpCoverPic");
+                    string strRandom = Guid.NewGuid().ToString() +
+                       Path.GetExtension(fpUpload.FileName);
+                    string strUpload = Path.Combine("~/Images", strRandom);
+                    strUpload = MapPath(strUpload);
+                    fpUpload.SaveAs(strUpload);
+
+                    //update ke table Buku ubah nama CoverPic sesuai nama random yang dimasukan
+                    TextBox txtKodeBuku = (TextBox)lvTambahBuku.InsertItem.FindControl("txtKodeBuku");
+                    sdsBuku.UpdateParameters[0].DefaultValue = strRandom;
+                    sdsBuku.UpdateParameters[1].DefaultValue = txtKodeBuku.Text;
+                    sdsBuku.Update();
+                    ltKeterangan.Text = "<span class='alert alert-success'>Data buku berhasil ditambah </span>";
+                }
+                catch (Exception ex)
+                {
+                    ltKeterangan.Text = "<span class='alert alert-danger'>" + ex.Message + "</span>";
+                }
+                
             }
         }
     }

@@ -10,7 +10,7 @@
             DeleteCommand="DELETE FROM [Buku] WHERE [KodeBuku] = @KodeBuku" 
             InsertCommand="INSERT INTO [Buku] ([KodeBuku], [KategoriID], [Judul], [Deskripsi], [Pengarang], [TahunTerbit], [Harga], [ISBN], [Qty], [Penerbit]) VALUES (@KodeBuku, @KategoriID, @Judul, @Deskripsi, @Pengarang, @TahunTerbit, @Harga, @ISBN, @Qty, @Penerbit)" 
             SelectCommand="SELECT * FROM [Buku]" 
-            UpdateCommand="UPDATE [Buku] SET [KategoriID] = @KategoriID, [Judul] = @Judul, [Deskripsi] = @Deskripsi, [Pengarang] = @Pengarang, [TahunTerbit] = @TahunTerbit, [CoverPic] = @CoverPic, [Harga] = @Harga, [ISBN] = @ISBN, [Qty] = @Qty, [Penerbit] = @Penerbit WHERE [KodeBuku] = @KodeBuku">
+            UpdateCommand="UPDATE [Buku] SET [CoverPic] = @CoverPic WHERE [KodeBuku] = @KodeBuku">
             <DeleteParameters>
                 <asp:Parameter Name="KodeBuku" Type="String" />
             </DeleteParameters>
@@ -28,16 +28,7 @@
                 <asp:Parameter Name="Penerbit" Type="String" />
             </InsertParameters>
             <UpdateParameters>
-                <asp:Parameter Name="KategoriID" Type="Int32" />
-                <asp:Parameter Name="Judul" Type="String" />
-                <asp:Parameter Name="Deskripsi" Type="String" />
-                <asp:Parameter Name="Pengarang" Type="String" />
-                <asp:Parameter Name="TahunTerbit" Type="String" />
                 <asp:Parameter Name="CoverPic" Type="String" />
-                <asp:Parameter Name="Harga" Type="Decimal" />
-                <asp:Parameter Name="ISBN" Type="String" />
-                <asp:Parameter Name="Qty" Type="Int32" />
-                <asp:Parameter Name="Penerbit" Type="String" />
                 <asp:Parameter Name="KodeBuku" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
@@ -45,7 +36,6 @@
         <asp:Literal ID="ltKeterangan" runat="server" />
         <br />
         <div class="col-lg-6">
-
             <asp:ListView runat="server" ID="lvTambahBuku" DataSourceID="sdsBuku" InsertItemPosition="FirstItem"
                 OnItemInserted="lvTambahBuku_ItemInserted">
                 <InsertItemTemplate>
