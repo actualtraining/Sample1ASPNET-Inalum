@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using SampleMasterPage.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +18,11 @@ namespace SampleMasterPage
                 gvKategori.EmptyDataText = "Data tidak ditemukan...";
                 gvBuku.EmptyDataText = "Data tidak ditemukan...";
             }
+
+            if (Session["pengguna"] == null)
+                Response.Redirect("~/LoginForm");
+            else if (((Pengguna)Session["pengguna"]).Aturan != "admin")
+                Response.Redirect("~/LoginForm");            
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
