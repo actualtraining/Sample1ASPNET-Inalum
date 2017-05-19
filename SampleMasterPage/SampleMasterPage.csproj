@@ -182,6 +182,7 @@
     <Content Include="Content\Startbootstrap\js\plugins\morris\raphael.min.js" />
     <Content Include="DaftarBuku.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DetailBuku.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FormRegistrasi.aspx" />
@@ -331,6 +332,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailBuku.aspx.cs">
+      <DependentUpon>DetailBuku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailBuku.aspx.designer.cs">
+      <DependentUpon>DetailBuku.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormRegistrasi.aspx.cs">
       <DependentUpon>FormRegistrasi.aspx</DependentUpon>
