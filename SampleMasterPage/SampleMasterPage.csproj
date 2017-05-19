@@ -229,6 +229,8 @@
     <Content Include="Logout.aspx" />
     <Content Include="MyGridStyle.css" />
     <Content Include="MyTheme.Master" />
+    <Content Include="SampleListView.aspx" />
+    <Content Include="TambahBuku.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="InalumDbDataSet.xsc">
       <DependentUpon>InalumDbDataSet.xsd</DependentUpon>
@@ -372,6 +374,13 @@
     <Compile Include="SampleDropdown.aspx.designer.cs">
       <DependentUpon>SampleDropdown.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SampleListView.aspx.cs">
+      <DependentUpon>SampleListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleListView.aspx.designer.cs">
+      <DependentUpon>SampleListView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SampleSqlDataSource1.aspx.cs">
       <DependentUpon>SampleSqlDataSource1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -422,6 +431,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TambahBuku.aspx.cs">
+      <DependentUpon>TambahBuku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TambahBuku.aspx.designer.cs">
+      <DependentUpon>TambahBuku.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

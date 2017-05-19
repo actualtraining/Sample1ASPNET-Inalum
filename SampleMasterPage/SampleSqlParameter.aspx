@@ -81,7 +81,8 @@
 
                     <asp:SqlDataSource runat="server" ID="sdsBukuDetail" ConnectionString="<%$ ConnectionStrings:InalumDbConnectionString %>" SelectCommand="SELECT [KodeBuku], [Judul], [Pengarang], [TahunTerbit], [ISBN], [Penerbit], [Harga] FROM [Buku] WHERE ([KategoriID] = @KategoriID)">
                         <SelectParameters>
-                            <asp:ControlParameter ControlID="ddKategori" Name="KategoriID" PropertyName="SelectedValue" Type="Int32" />
+                            <asp:ControlParameter ControlID="ddKategori" Name="KategoriID" 
+                                PropertyName="SelectedValue" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
 
